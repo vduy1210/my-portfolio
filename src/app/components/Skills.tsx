@@ -19,7 +19,7 @@ export function Skills() {
     },
     {
       title: "DevOps & Tools",
-      skills: ["Git/GitHub", "Docker", "Postman", "IntelliJ", "Linux"],
+      skills: ["Git/GitHub", "Docker", "Postman", "IntelliJ"],
       color: "bg-emerald-500",
     },
   ];
