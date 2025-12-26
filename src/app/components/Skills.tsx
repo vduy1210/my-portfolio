@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import {
   FaJava, FaNodeJs, FaPython, FaReact, FaVuejs,
-  FaAndroid, FaGithub, FaDocker, FaDatabase
+  FaAndroid, FaGithub, FaDatabase
 } from "react-icons/fa";
 import {
   SiSpring, SiExpress, SiMysql, SiPostgresql,
@@ -48,10 +48,9 @@ export function Skills() {
       gradient: "from-cyan-500/20 to-cyan-500/5"
     },
     {
-      title: "DevOps & Tools",
+      title: " Tools",
       skills: [
         { name: "Git/GitHub", icon: FaGithub },
-        { name: "Docker", icon: FaDocker },
         { name: "Postman", icon: SiPostman },
         { name: "IntelliJ", icon: SiIntellijidea }
       ],
