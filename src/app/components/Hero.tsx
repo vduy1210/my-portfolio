@@ -17,13 +17,14 @@ export function Hero() {
     >
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-violet-600/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[100px]" />
+        {/* Background Blobs Removed for Flat Design */}
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse" /> */}
+        {/* <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[100px]" /> */}
 
         {/* Code Rain Effect / Grid (Simplified with CSS Grid) */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: "linear-gradient(#7c3aed 1px, transparent 1px), linear-gradient(90deg, #7c3aed 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(#3b82f6 1px, transparent 1px), linear-gradient(90deg, #3b82f6 1px, transparent 1px)",
             backgroundSize: "50px 50px"
           }}
         />
@@ -50,8 +51,8 @@ export function Hero() {
 
             {/* Main Heading */}
             <h1 className="text-6xl md:text-8xl mb-6 font-bold tracking-tight">
-              <span className="block mb-2">Building Scalable</span>
-              <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="block mb-2 text-foreground">Building Scalable</span>
+              <span className="text-primary">
                 Backend Solutions
               </span>
             </h1>
@@ -105,7 +106,7 @@ export function Hero() {
                 whileHover={{ y: -5 }}
                 className="p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-violet-500 to-cyan-500 bg-clip-text text-transparent mb-1">
+                <div className="text-3xl font-bold text-primary mb-1">
                   {stat.number}
                 </div>
                 <div className="text-sm text-foreground/60 font-medium">{stat.label}</div>

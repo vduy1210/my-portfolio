@@ -22,7 +22,8 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-background to-muted/50 border-t py-16 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 bg-gradient-to-b from-violet-200/20 to-transparent dark:from-violet-900/10 rounded-full blur-3xl" />
+      {/* Background decoration Removed */}
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 bg-gradient-to-b from-violet-200/20 to-transparent dark:from-violet-900/10 rounded-full blur-3xl" /> */}
 
 
       <div className="container mx-auto px-4 relative z-10">
@@ -36,7 +37,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <div className="text-3xl font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+              <div className="text-3xl font-bold text-primary">
                 Vu Duy
               </div>
               <p className="text-foreground/70 leading-relaxed">
@@ -55,10 +56,10 @@ export function Footer() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-10 h-10 rounded-xl bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 hover:from-violet-500 hover:to-fuchsia-500 border border-violet-200 dark:border-violet-800 hover:border-transparent flex items-center justify-center group transition-all"
+                      className="w-10 h-10 rounded-xl bg-muted hover:bg-primary hover:text-white border border-border flex items-center justify-center group transition-all"
                       aria-label={social.label}
                     >
-                      <Icon className="h-5 w-5 text-violet-600 dark:text-violet-400 group-hover:text-white transition-colors" />
+                      <Icon className="h-5 w-5 text-muted-foreground group-hover:text-white transition-colors" />
 
                     </motion.a>
                   );
@@ -102,7 +103,7 @@ export function Footer() {
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all shadow-lg shadow-violet-500/20"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
               >
                 Get In Touch
               </a>

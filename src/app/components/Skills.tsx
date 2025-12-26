@@ -20,8 +20,9 @@ export function Skills() {
         { name: "Express.js", icon: SiExpress },
         { name: "Python", icon: FaPython }
       ],
-      color: "bg-violet-500",
-      gradient: "from-violet-500/20 to-violet-500/5"
+      color: "text-blue-500",
+      bg: "bg-blue-500/10",
+      border: "border-blue-500/20"
     },
     {
       title: "Frontend & Mobile",
@@ -32,8 +33,9 @@ export function Skills() {
         { name: "Android SDK", icon: FaAndroid },
         { name: "Java Swing", icon: FaJava }
       ],
-      color: "bg-fuchsia-500",
-      gradient: "from-fuchsia-500/20 to-fuchsia-500/5"
+      color: "text-cyan-500",
+      bg: "bg-cyan-500/10",
+      border: "border-cyan-500/20"
     },
     {
       title: "Data & Cloud",
@@ -44,8 +46,9 @@ export function Skills() {
         { name: "Firebase", icon: SiFirebase },
         { name: "Room DB", icon: FaDatabase }
       ],
-      color: "bg-cyan-500",
-      gradient: "from-cyan-500/20 to-cyan-500/5"
+      color: "text-teal-500",
+      bg: "bg-teal-500/10",
+      border: "border-teal-500/20"
     },
     {
       title: " Tools",
@@ -54,8 +57,9 @@ export function Skills() {
         { name: "Postman", icon: SiPostman },
         { name: "IntelliJ", icon: SiIntellijidea }
       ],
-      color: "bg-emerald-500",
-      gradient: "from-emerald-500/20 to-emerald-500/5"
+      color: "text-indigo-500",
+      bg: "bg-indigo-500/10",
+      border: "border-indigo-500/20"
     },
   ];
 
@@ -86,10 +90,10 @@ export function Skills() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 hover:bg-card/80 transition-colors"
+              className="bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-8 hover:bg-card/80 transition-colors"
             >
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                <span className={`w-3 h-3 rounded-full ${category.color} animate-pulse`} />
+                <span className={`w-3 h-3 rounded-full ${category.color.replace('text-', 'bg-')} animate-pulse`} />
                 {category.title}
               </h3>
 
@@ -98,9 +102,9 @@ export function Skills() {
                   <motion.span
                     key={skill.name}
                     whileHover={{ scale: 1.1, backgroundColor: "var(--primary)", color: "#fff" }}
-                    className="pl-3 pr-4 py-2 bg-background border border-border rounded-xl text-sm font-medium text-foreground/80 cursor-default transition-colors shadow-sm flex items-center gap-2 group"
+                    className="pl-3 pr-4 py-2 bg-background border border-border rounded-xl text-sm font-medium text-foreground/80 cursor-default transition-colors shadow-sm flex items-center gap-2 group hover:border-primary/50"
                   >
-                    <skill.icon className={`w-4 h-4 ${category.color.replace('bg-', 'text-')} group-hover:text-white transition-colors`} />
+                    <skill.icon className={`w-4 h-4 ${category.color} transition-colors`} />
                     {skill.name}
                   </motion.span>
                 ))}
@@ -112,4 +116,3 @@ export function Skills() {
     </section>
   );
 }
-

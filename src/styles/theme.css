@@ -3,19 +3,19 @@
 :root {
   --font-size: 16px;
   /* Deep Obsidian Background */
-  --background: #0a0a0f;
-  --foreground: #e0e0e0;
+  --background: #02040a;
+  --foreground: #e2e8f0;
 
-  /* Card / Surface */
-  --card: #13131f;
+  /* Card / Surface - Deep Blue-Grey with high transparency potential */
+  --card: #0d1117;
   --card-foreground: #ffffff;
 
   /* Popovers */
-  --popover: #161622;
+  --popover: #0d1117;
   --popover-foreground: #ffffff;
 
-  /* Primary Brand - Electric Violet to Neon Blue */
-  --primary: #7c3aed;
+  /* Primary Brand - Electric Blue to Cyan */
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
 
   /* Secondary - Cyan/Teal Accents */
@@ -23,20 +23,20 @@
   --secondary-foreground: #ffffff;
 
   /* Muted / Borders */
-  --muted: #1f1f2e;
+  --muted: #1e293b;
   --muted-foreground: #94a3b8;
 
-  --accent: #2d2d3b;
+  --accent: #1e293b;
   --accent-foreground: #ffffff;
 
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  --border: #2d2d3a;
-  --input: #1f1f2e;
-  --input-background: #13131f;
+  --border: #1e293b;
+  --input: #1e293b;
+  --input-background: #0d1117;
 
-  --ring: #7c3aed;
+  --ring: #3b82f6;
 
   /* Aurora Chart Colors */
   --chart-1: #8b5cf6;

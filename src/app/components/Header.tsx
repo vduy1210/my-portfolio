@@ -75,7 +75,7 @@ export function Header() {
             className="relative"
           >
             <div className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+              <span className="text-primary font-black tracking-tight">
                 Vu Duy
               </span>
             </div>
@@ -97,11 +97,11 @@ export function Header() {
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 rounded-xl -z-10 border border-violet-500/30 shadow-[0_0_15px_rgba(124,58,237,0.3)]"
+                    className="absolute inset-0 bg-primary/10 rounded-xl -z-10 border border-primary/20"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
-                <span className={activeSection === item.id ? "bg-gradient-to-r from-violet-200 to-fuchsia-200 bg-clip-text text-transparent font-bold drop-shadow-sm" : ""}>
+                <span className={activeSection === item.id ? "text-primary font-bold" : ""}>
                   {item.label}
                 </span>
               </motion.button>
@@ -109,7 +109,7 @@ export function Header() {
             <Button
               size="sm"
               onClick={() => scrollToSection("contact")}
-              className="ml-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-lg shadow-violet-500/20"
+              className="ml-4 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20"
             >
               Let's Talk
             </Button>
@@ -148,7 +148,7 @@ export function Header() {
             ))}
             <Button
               onClick={() => scrollToSection("contact")}
-              className="mt-2 bg-gradient-to-r from-orange-600 to-rose-600 hover:from-orange-700 hover:to-rose-700 text-white"
+              className="mt-2 bg-primary hover:bg-primary/90 text-white"
             >
               Let's Talk
             </Button>
