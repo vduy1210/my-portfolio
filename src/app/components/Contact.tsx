@@ -2,7 +2,7 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, Github, Send, Phone } from "lucide-react";
+import { Mail, Github, Send, Phone, Eye } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -195,16 +195,29 @@ export function Contact() {
                         my design skills and continue growing.
                       </p>
                     </div>
-                    <Button
-                      variant="secondary"
-                      size="lg"
-                      className="w-full bg-white text-violet-600 hover:bg-white/90 rounded-xl h-12 shadow-lg font-bold"
-                      asChild
-                    >
-                      <a href="/Vu_Duy_CV.pdf" download="Vu_Duy_CV.pdf" target="_blank" rel="noopener noreferrer">
-                        Download Resume
-                      </a>
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button
+                        variant="secondary"
+                        size="lg"
+                        className="flex-1 bg-white text-violet-600 hover:bg-white/90 rounded-xl h-12 shadow-lg font-bold"
+                        asChild
+                      >
+                        <a href="/Vu_Duy_CV.pdf" target="_blank" rel="noopener noreferrer">
+                          <Eye className="mr-2 h-4 w-4" />
+                          View CV
+                        </a>
+                      </Button>
+                      <Button
+                        variant="secondary"
+                        size="lg"
+                        className="flex-1 bg-violet-600/20 text-white hover:bg-violet-600/30 border-2 border-white/50 rounded-xl h-12 shadow-lg font-bold backdrop-blur-sm"
+                        asChild
+                      >
+                        <a href="/Vu_Duy_CV.pdf" download="Vu_Duy_CV.pdf" target="_blank" rel="noopener noreferrer">
+                          Download CV
+                        </a>
+                      </Button>
+                    </div>
                   </Card>
                 </div>
               </motion.div>
@@ -218,7 +231,7 @@ export function Contact() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="grid md:grid-cols-3 gap-6"
             >
-              {contactInfo.map((info, index) => {
+              {contactInfo.map((info) => {
                 const Icon = info.icon;
                 return (
                   <motion.a
