@@ -1,26 +1,62 @@
 import { motion } from "motion/react";
+import {
+  FaJava, FaNodeJs, FaPython, FaReact, FaVuejs,
+  FaAndroid, FaGithub, FaDocker, FaDatabase
+} from "react-icons/fa";
+import {
+  SiSpring, SiExpress, SiMysql, SiPostgresql,
+  SiSqlite, SiFirebase, SiPostman, SiIntellijidea
+} from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 
 export function Skills() {
   const skillCategories = [
     {
       title: "Backend Core",
-      skills: ["Java", "Spring Boot", "Node.js", "Express.js", "Python"],
+      skills: [
+        { name: "Java", icon: FaJava },
+        { name: "Spring Boot", icon: SiSpring },
+        { name: "Node.js", icon: FaNodeJs },
+        { name: "Express.js", icon: SiExpress },
+        { name: "Python", icon: FaPython }
+      ],
       color: "bg-violet-500",
+      gradient: "from-violet-500/20 to-violet-500/5"
     },
     {
       title: "Frontend & Mobile",
-      skills: ["ReactJS", "Vue.js", "React Native", "Android SDK", "Java Swing"],
+      skills: [
+        { name: "ReactJS", icon: FaReact },
+        { name: "Vue.js", icon: FaVuejs },
+        { name: "React Native", icon: TbBrandReactNative },
+        { name: "Android SDK", icon: FaAndroid },
+        { name: "Java Swing", icon: FaJava }
+      ],
       color: "bg-fuchsia-500",
+      gradient: "from-fuchsia-500/20 to-fuchsia-500/5"
     },
     {
       title: "Data & Cloud",
-      skills: ["MySQL", "PostgreSQL", "SQLite", "Firebase", "Room DB"],
+      skills: [
+        { name: "MySQL", icon: SiMysql },
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "SQLite", icon: SiSqlite },
+        { name: "Firebase", icon: SiFirebase },
+        { name: "Room DB", icon: FaDatabase }
+      ],
       color: "bg-cyan-500",
+      gradient: "from-cyan-500/20 to-cyan-500/5"
     },
     {
       title: "DevOps & Tools",
-      skills: ["Git/GitHub", "Docker", "Postman", "IntelliJ"],
+      skills: [
+        { name: "Git/GitHub", icon: FaGithub },
+        { name: "Docker", icon: FaDocker },
+        { name: "Postman", icon: SiPostman },
+        { name: "IntelliJ", icon: SiIntellijidea }
+      ],
       color: "bg-emerald-500",
+      gradient: "from-emerald-500/20 to-emerald-500/5"
     },
   ];
 
@@ -61,11 +97,12 @@ export function Skills() {
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <motion.span
-                    key={skill}
+                    key={skill.name}
                     whileHover={{ scale: 1.1, backgroundColor: "var(--primary)", color: "#fff" }}
-                    className="px-4 py-2 bg-background border border-border rounded-xl text-sm font-medium text-foreground/80 cursor-default transition-colors shadow-sm"
+                    className="pl-3 pr-4 py-2 bg-background border border-border rounded-xl text-sm font-medium text-foreground/80 cursor-default transition-colors shadow-sm flex items-center gap-2 group"
                   >
-                    {skill}
+                    <skill.icon className={`w-4 h-4 ${category.color.replace('bg-', 'text-')} group-hover:text-white transition-colors`} />
+                    {skill.name}
                   </motion.span>
                 ))}
               </div>

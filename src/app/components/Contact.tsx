@@ -2,7 +2,7 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, Linkedin, Github, Send, Phone, MapPin } from "lucide-react";
+import { Mail, Github, Send, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
